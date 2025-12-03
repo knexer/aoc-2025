@@ -2,6 +2,7 @@ use std::fs;
 
 mod day1 {
     pub mod part1;
+    pub mod part2;
 }
 
 fn main() {
@@ -15,6 +16,7 @@ fn main() {
     let input = fs::read_to_string(path).expect("Should have been able to read the file!");
     let solution = match (day, part) {
         (1, 1) => day1::part1::part1,
+        (1, 2) => day1::part2::part2,
         _ => panic!("No implementation registered for day {day} part {part}!"),
     };
     println!("{:?}", solution(&input));
