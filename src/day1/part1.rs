@@ -1,4 +1,4 @@
-pub fn part1(input: &str) -> i32 {
+pub fn part1(input: &str) -> i64 {
     let zeroes = input
         .lines()
         .map(line_to_increments)

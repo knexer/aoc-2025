@@ -1,4 +1,4 @@
-pub fn part2(input: &str) -> i32 {
+pub fn part2(input: &str) -> i64 {
     let net_sums = input.lines().map(line_to_increments).scan(50, |sum, next| {
         *sum += next;
         Some(*sum)
@@ -17,9 +17,9 @@ pub fn part2(input: &str) -> i32 {
     zero_crossings.sum()
 }
 
-fn line_to_increments(line: &str) -> i32 {
+fn line_to_increments(line: &str) -> i64 {
     let (prefix, num) = line.split_at(1);
-    let num = num.parse::<i32>().expect("Should be an integer: {num}");
+    let num = num.parse::<i64>().expect("Should be an integer: {num}");
     match prefix {
         "L" => -num,
         "R" => num,
