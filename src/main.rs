@@ -35,6 +35,10 @@ mod day8 {
     pub mod part2;
 }
 
+mod day9 {
+    pub mod part1;
+}
+
 fn main() {
     let (day, part, test) = parse_args();
 
@@ -61,6 +65,7 @@ fn main() {
         (7, 2) => day7::part2::part2,
         (8, 1) => day8::part1::part1,
         (8, 2) => day8::part2::part2,
+        (9, 1) => day9::part1::part1,
         _ => panic!("No implementation registered for day {day} part {part}!"),
     };
     println!("{:?}", solution(&input));
