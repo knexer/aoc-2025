@@ -37,6 +37,7 @@ mod day8 {
 
 mod day9 {
     pub mod part1;
+    pub mod part2;
 }
 
 fn main() {
@@ -66,6 +67,7 @@ fn main() {
         (8, 1) => day8::part1::part1,
         (8, 2) => day8::part2::part2,
         (9, 1) => day9::part1::part1,
+        (9, 2) => day9::part2::part2,
         _ => panic!("No implementation registered for day {day} part {part}!"),
     };
     println!("{:?}", solution(&input));
